@@ -21,7 +21,7 @@ export async function generateWallets(mnemonic : string , currentIndex : number)
 
 export async function createConnection(network: string) {
   if (network === 'devnet') {
-    const rpcUrl = process.env.SOLANA_DEVNET_RPC || '' ;
+    const rpcUrl = process.env.NEXT_PUBLIC_SOLANA_DEVNET_RPC || '' ;
     return new Connection(rpcUrl);
   }else{
     const rpcUrl = process.env.NEXT_PUBLIC_SOLANA_MAINNET_RPC || clusterApiUrl("mainnet-beta") ;
